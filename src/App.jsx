@@ -1,13 +1,17 @@
 import { Suspense, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Main, Overview } from "./pages";
+import { Main, Overview, Login, NotFound } from "./pages";
+
+//import Login from "./pages/authentication/Login";
 
 function App() {
   return (
     <Routes>
       <Route path='/dashboard' element={<Main />}>
         <Route index element={<Overview />} />
+        <Route path='*' element={<NotFound />} />
       </Route>
+      <Route path='/login' element={<Login />} />
     </Routes>
     // <Suspense fallback={"Error"}>
     // <Routes>
@@ -21,6 +25,8 @@ function App() {
     //   />
     // </Routes>
     // </Suspense>
+
+    // <Login/>
   );
 }
 

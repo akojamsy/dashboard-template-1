@@ -1,9 +1,15 @@
 import { marketplaceIcon, menuIcon, notificationIcon } from "../../assets";
 import { BiChevronDown } from "../../assets/icons";
 
-const Topnav = ({ setShowSidebar }) => {
+const Topnav = ({ setShowSidebar, collapse }) => {
   return (
-    <header className='fixed w-screen md:w-[calc(100vw_-_14rem)] lg:w-[calc(100vw_-_16rem)] flex justify-between items-center bg-white p-4 z-10'>
+    <header
+      className={`fixed w-screen  ${
+        collapse
+          ? "md:w-[calc(100vw_-_4rem)] lg:w-[calc(100vw_-_4rem)]"
+          : "md:w-[calc(100vw_-_14rem)] lg:w-[calc(100vw_-_16rem)]"
+      } flex justify-between items-center bg-white p-4 z-10 transition-all duration-500`}
+    >
       <div className='flex items-start gap-x-2 '>
         <img
           src={menuIcon}

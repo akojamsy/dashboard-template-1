@@ -1,3 +1,4 @@
-import { BiChevronDown } from "react-icons/bi";
+import { BiChevronDown, BiChevronsLeft } from "react-icons/bi";
+import { BsFillRocketTakeoffFill } from "react-icons/bs";
 
-export { BiChevronDown };
+export { BiChevronDown, BiChevronsLeft, BsFillRocketTakeoffFill };

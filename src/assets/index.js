@@ -12,6 +12,7 @@ import upgradeStarLight from "./images/upgrade-star-light.png";
 import upgradeStar from "./images/upgrade-star.png";
 import logo from "./images/logo.png";
 import menuIcon from "./images/menu-icon.png";
+import logoMini from "./images/logo-mini.png";
 
 export {
   dashboardIcon,
@@ -25,5 +26,6 @@ export {
   upgradeStar,
   marketplaceIcon,
   logo,
+  logoMini,
   menuIcon,
 };

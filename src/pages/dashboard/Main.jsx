@@ -15,9 +15,15 @@ const Main = () => {
           collapse={collapse}
           setCollapse={setCollapse}
         />
-        <section className='md:w-[calc(100vw_-_14rem)] lg:w-[calc(100vw_-_16rem)]'>
+        <section
+          className={`${
+            collapse
+              ? "md:w-[calc(100vw_-_4rem)] lg:w-[calc(100vw_-_4rem)]"
+              : "md:w-[calc(100vw_-_14rem)] lg:w-[calc(100vw_-_16rem)] duration-500 transition-all"
+          }`}
+        >
           <Topnav setShowSidebar={setShowSidebar} collapse={collapse} />
-          <div className='p-5 pt-20 lg:pt-24 '>
+          <div className='p-5 pt-20 lg:pt-24 h-[100vh] w-full overflow-y-scroll'>
             <Outlet />
           </div>
         </section>
